@@ -23,24 +23,61 @@
 	<h3>
 			Welcome to the Call of Duty Scripting Basics guide!
 	</h3>
-	<p>Unfortunately, this page (and website!) are under construction and consequently don't contain the knowledge you are seeking. Please check back later!</p>
 	
-	<p>Scripting: You've heard of it, and know it has to do with coding. Many people either outsource the scripting to others or learn to complete it themselves.></p>
+	<h2><p>Unfortunately, this page (and website!) are under construction and consequently don't contain the knowledge you are seeking. Please check back later!</p></h2>
 	
 	<p>
-		Scripting is a simplified form of coding for inside the game, whether this be Modern Warfare, World at War, or Black Ops. 
-		It is what powers all ingame events. Scripting itself is actually a very complicated process with MANY different things to consider,
-		however, you have already learned most of these concepts in Math. I'm sure you know that computers work with 1's and 0's, those types of
-		coding interact with low-level interfaces where calculations are manually manipulated. The scripting we will be doing is high-level, meaning
-		that we will not be dealing with 1's and 0's, far from it, however math is very similar to coding.
+		Scripting: A simplified form of coding for in-game events. This is the introduction and getting started page for the tutorial series,
+		if you are looking for addition materials, please look at the bottom of the page.
 	</p>
 	
-	<p>Without any further ado, let's get started! If you've come back and already started the tutorial process, the links to the other pages are at the bottom of the page.</p>
+	<h2>Creating the script file</h2>
+	<p>
+		Scripts are contained inside of .GSC files. 
+		
+		To create a script, make a new .GSC file in your mod's maps folder. To edit an existing script, copy it from raw/maps to your mod's maps folder.
+		Don't ever edit any files inside the raw directory unless you know what you are doing.
+		
+		Tick the checkmark next to the file in the mod tab of Launcher, which will include them in your IWD file when you build it.
+	</p>
 	
-	
-	<h3>Sections</h3>
+	<h2>Script Contents</h2>
+	<p>
+		Scripting is a lot like math. Math in real life is the reverse engineering of events and logic.
+		If you have 5 bottles and 2 are taken away, you have 3. Math is, in a sense, the reverse engineering of reality.
+		We can apply it's concepts to simulate events that can happen.
+		
+		As your learning of math has been built upon many different concepts, so must your coding knowledge.
+		To actually understand the best ways of applying scripting to real-life concepts, you ARE going to have to read a lot.
+		
+		For this first demonstration, we're going to do an idea generously donated by <span style="text-decoration: line-through;">my guinea pig</span> RadimaX:
+		<pre>	An in-game trigger that gives you 250 points and has a cooldown of 5 rounds.</pre>
 
-	<p> TO-DO: LINKS TO OTHER PAGES</p>
+		To break this down, you have to think like a computer. You probably have heard computers work in 1's and 0's.
+		So does logic: We can interpret this as true (1) and false (0), turning it into an if-then statement.
+		
+		For example:
+		<pre>	IF player knifes a trigger AND it's been more than 5 rounds THEN give them 250 points.</pre>
+		
+		Let's look at a little bit of math right now:
+			<code>x=5</code>
+		Congratulations, we just set variable x to 5. Let's look at it in some actual script:
+			<code>x=5;</code> 
+		It's exactly the same (we'll get to the ; later),
+	</p>
+	<h3>Sections</h3>
+	<p>
+		Choosing a text-editor
+		FOR and WHILE loops
+		Advanced IF
+		SWITCH block
+		Debugging
+		Client-side Scripting (+notetracks [T4M Only])
+		Compiling scripts into Fast-Files
+	</p>
+	
+	<h3>FAQ</h3>
+	If you have a question, please ask and I'll reply here for all later visitors!
 	
 	</section>
 	</div>
