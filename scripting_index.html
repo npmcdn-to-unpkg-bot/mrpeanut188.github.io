@@ -15,131 +15,28 @@
 		<header class="inner">
 			<h1 id="project_title">Call of Duty Scripting Reference</h1>
 			<h2 id="project_tagline">Index Page and Introduction</h2>
-        	</header>
-    	</div>
-    	<!-- MAIN CONTENT -->
+        </header>
+    </div>
+		
+    <!-- MAIN CONTENT -->
 	<div id="main_content_wrap" class="outer">
-	<section id="main_content" class="inner">
-	
-	<h3>
-		Welcome to the Call of Duty Scripting Basics guide!
-	</h3>
+		<section id="main_content" class="inner">
+		
+		<h3>
+			Main Page
+		</h3>
 
-	<p>
-		Scripting: A simplified form of coding for in-game events. This is the introduction and getting started page for the tutorial series,
-		if you are looking for additional materials, please look at the bottom of the page.
-	</p>
-
-	<p style="text-align: center;">
-		<a href="#faq"> Frequently Asked Questions </a>
-		<br/>
-		<a href="#sections"> Additional Sections </a>
-		<br/>
-		<a href="#resources"> Resources </a>
-	</p>
-
-	
-	<br/>
-	
-	<h3>Creating the script file</h2>
-	<p>
-		Scripts are contained inside of .GSC files. 
+		<h4>
+			<a href="#">Introduction + FAQ</a>
+		</h4>
 		
-		To create a script, make a new .GSC file in your mod's maps folder. To edit an existing script, copy it from raw/maps to your mod's maps folder.
-		Don't ever edit any files inside the raw directory unless you know what you are doing.
+		<h4>
+			<a href="#">Resources</a>
+		</h4>
 		
-		Tick the checkmark next to the file in the mod tab of Launcher, which will include them in your IWD file when you build it.
-	</p>
-	
-	<br/>
-	
-	<h3>Script Contents</h2>
-	<p>
-		Scripting is a lot like math. Math in real life is the reverse engineering of events and logic. <br/>
-		If you have 5 bottles and 2 are taken away, you have 3. Math is, in a sense, the reverse engineering of reality.
-		We can apply it's concepts to simulate events that can happen.
-		
-		<br/>
-		<br/>
-		
-		As your learning of math has been built upon many different concepts, so must your coding knowledge.
-		To actually understand the best ways of applying scripting to real-life concepts, you ARE going to have to read a lot.
-	</p>
-	<p>
-		For this first demonstration, we're going to do an idea generously donated by <span style="text-decoration: line-through;">my guinea pig</span> RadimaX:
-		<pre>An in-game trigger that gives you 250 points and has a cooldown of 5 rounds.</pre>
-	</p>
-	<p>
-		To break this down, you have to think like a computer. You probably have heard computers work in 1's and 0's.
-		So does logic: We can interpret this as true (1) and false (0), turning it into an if-then statement.
-		
-		<br/>
-		<br/>
-		
-		For example:
-		<pre>IF player knifes a trigger AND it's been more than 5 rounds THEN give them 250 points.</pre>
-		
-		<br/>
-		<br/>
-		
-		This example will require some advanced techniques that are talked about more in-depth in their own dedicated sections.
-		
-		<br/>
-		<br/>
-		
-		To start please create a new script file following the directions at the top of the page. I am going to call mine knife_reward.gsc.
-		Like said, scripting is like math. However, the scripting we are doing is going to be function based.
-		
-		<br/>
-		<br/>
-		
-		Let's look at a math function:
-		<pre>f(x) = 2x + 5</pre>
-		<br/>
-		Now let's turn that into a scripting function:
-		
-<pre>
-f(x)
-{
-	return 2x+5;
-}</pre>
-
-		<br/>
-		In mathematical terms, these are the same, only formatted differently. 
-	</p>
-	
-	<h3 id="sections">Sections</h3>
-	<p>
-		Choosing a text-editor
-		<br/>
-		FOR and WHILE loops
-		<br/>
-		Advanced IF
-		<br/>
-		SWITCH block
-		<br/>
-		Debugging
-		<br/>
-		Client-side Scripting (+notetracks [T4M Only])
-		<br/>
-		Compiling scripts into Fast-Files
-	</p>
-	
-	<h3 id="resources">Resources</h3>
-	TODO
-	
-	<h3 id="faq">FAQ</h3>
-	
-	<p>
-	"What is bad syntax?"
-	<br/>&nbsp;&nbsp;&nbsp;&nbsp;Syntax is the "grammar" of a programming language. It means that there is a typo or something is not formatted correctly.
-	<br/>&nbsp;&nbsp;&nbsp;&nbsp;Most of the time these are from missing a semi-colon (;) at line ends or you forgot to close brackets.
-	</p>
-	If you have a question, please ask and I'll reply here for all later visitors!
-
-	
-	</section>
+		</section>
 	</div>
+	
 	<!-- FOOTER  -->
 	<div id="footer_wrap" class="outer">
 		<footer class="inner">
