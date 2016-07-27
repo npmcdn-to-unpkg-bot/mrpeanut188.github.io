@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="Call of Duty Scripting Basics">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<title>CoD Scripting Basics</title>
+</head>
+
+<body>
+	<!-- HEADER -->
+	<div id="header_wrap" class="outer">
+		<header class="inner">
+			<h1 id="project_title">Call of Duty Scripting Reference</h1>
+			<h2 id="project_tagline">Introduction + FAQ</h2>
+        </header>
+    </div>
+		
+    <!-- MAIN CONTENT -->
+	<div id="main_content_wrap" class="outer">
+	  <section id="main_content" class="inner">
+		
+		<h3>Introduction</h3>
+
+			Hello! My name is Mrpeanut188 and this is my .GSC scripting tutorial for Call of Duty.
+
+			The entire transcript of this video is available in the description or under the embed
+			depending on your viewing source.
+
+			Scripting is simply coding for a game level, so in any maps you are creating you can
+			create new features or improve existing ones. They are the gears that drive the game.
+
+			Before we get into the actual scripting, there are two prerequisites you need to understand.
+			The first is that coding itself is just a method, the skills you need are problem
+			solving skills and a basic foundation. Anything you do will have to be specifically
+			looked at and there are NO generic answers. If you want to grasp even a basic understanding,
+			you will have to do a LOT of reading along with critical thinking.
+
+			The second is the actual filestructure for modding Call of Duty. Inside the RAW folder
+			are a bunch of different folders with different types of files. Those are the files
+			the game uses, your mod folder contents are packed up and replace these files in the 
+			actual game when it is ran. For example, the MAPS folder in your mod directory merges
+			and overwrites the MAPS folder loaded by the game when you load your mod. However,
+			the RAW files are only for development, the actual game files are packed away.
+
+			Whenever you include something in your mod, it adds those files to the game.
+			It also replaces files so you can edit existing files instead of just create.
+
+			NEVER EDIT ANYTHING IN THE RAW FOLDER, INCLUDE IT IN YOUR MOD INSTEAD!
+
+			Now that we have that covered, let's get into the actual scripting.
+			For my example to demonstrate some .GSC, I'm going to make a buyable
+			that will move to a destination point when purchased.
+
+			Instead of adding this feature to existing scripts, we're going to make it
+			as a seperate file. We could then release this to the public or easily add it
+			to other projects.
+
+			Script files go inside the MAPS folder. Your thoughts should be "This is a file for
+			my mod, so it will go inside my MOD folder."
+
+			As you've noticed inside of the MAPS directory there are many .GSC files, those are
+			your scipts.  We're going to create a new .GSC file here, which is a text file.
+			For this tutorial I'm calling it 'tutorial.gsc'. 
+
+			Nb. Strongly recommended to have a text editor like Notepad++ or UltraEdit.
+
+			We are now beginning the actual basis to scripting.
+
+			Computers work in numbers, and coding is a lot like math with words.
+			The better math knowledge you have the easier this will be to grasp.
+
+			Let's look at a math function: sin(x)
+
+			Sin is the name of the function, x is what is being passed to it (argument).
+			Defining functions in scripting is very similar:
+
+			exampleFunction(x, y){}
+
+			The name of it is exampleFunction, and the arguments are x and y. The pair of
+			brackets past of it contain all the actions inside of it. To add some actions
+			to our function, we need to create a statement. Statments compose the insides
+			of functions. Let's make the function add both x and y and give back the value.
+
+			exampleFunction(x, y)
+			{
+				return x + y;
+			}
+
+			Nb. The formatting can be different except for special cases, but this is the recommended formatting.
+
+			This function will now return the added values of x and y. A semicolon is
+			required after every statement. To actually use our function, we execute,
+			or call the function the same as math.
+
+			exampleFunction(5, 6);
+
+			Nb. Since our function returns a value, we would be using this value directly or setting it to a variable for future use.
+
+			To do anything in the game, many functions have statements which call other functions, and so forth.
+			Everything is executed in order from top-to-bottom, so group actions that should happen at the same
+			time in the same functions.
+
+			To learn the rest of scripting, please view the individual sections. As of the time of writing,
+			none exist but they will shortly. The following is going to explain how to activate your written
+			functions so that your code is executed.
+
+			* SHORT PAUSE *
+
+			When you load your map, MAPNAME.gsc is loaded. For all revelant map files, the call should stem
+			from this file. If you open the file, you'll see a lot of calls to other files using this format:
+
+			maps\FILENAME::FUNCTION();
+
+			Nb. Filename does not include the .GSC extension.
+
+			To conclude this introduction to the tutorial series, please have a look at the resources page.
+
+			If you have any questions, please leave a comment on this video and I will try to answer all of
+			your questions.
+
+			Have a nice day, and journey of learning!
+
+			//These are seperate reading sections to cover unique concepts.
+			//TODO: Crash Course (Basic needed knowledge)
+			//TODO: .GSC vs .CSC (Server vs. Client) + T4M Notetracks
+			//TODO: Variables and Variable Types
+			//TODO: INCLUDES
+			//TODO: Debugging
+			//TODO: Advanced Math
+			//TODO: IF, THEN
+			//TODO: Loops
+			//TODO: Mini: Switch Statement
+			//TODO: Mini: Threading & Function Tricks
+			//TODO: Compiling Scripts into Fast-Files
+
+		<h3>FAQ</h3>
+		
+		
+		</section>
+	</div>
+	
+	<!-- FOOTER  -->
+	<div id="footer_wrap" class="outer">
+		<footer class="inner">
+			<p>Courteously hosted by <a href="https://pages.github.com">GitHub Pages</a>. Created 2016. Slate Theme by Jason Costello.</p>
+		</footer>
+	</div>
+</body>
+</html>
