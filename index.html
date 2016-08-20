@@ -8,18 +8,22 @@
 	<meta charset="UTF-8">
 
 	<link type="text/css" rel="stylesheet" href="stylesheets/index.css">
+	<link type="text/css" rel="stylesheet" href="stylesheets/fluidbox.css">
 	<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+	<script src="javascripts/main.js"></script>
 	</head>
 
 	<body id="top">
 		<div id="cv" class="instaFade">
 			<div class="mainDetails">
 				<div id="headshot" class="quickFade">
-					<a href="#"><img src="images/portrait_shirt.jpg" alt="Self-Portrait" /></a>
+					<a href="images/portrait_shirt.jpg" title="Self-Portrait" data-fluidbox><img src="images/portrait_shirt.jpg" title="Self-Portrait" alt="Self-Portrait" /></a>
 				</div>
 
 				<div id="name">
@@ -66,6 +70,8 @@
 								CIW Internet Business Associate Certification </br>
 								CIW Site Development Associate Certification </br>
 							</p>
+							
+							</br>
 							
 							<h2>Foreign Language</h2>
 							<p>
