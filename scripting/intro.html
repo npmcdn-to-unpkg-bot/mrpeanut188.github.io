@@ -1,73 +1,156 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset='utf-8'>
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<meta name="description" content="Call of Duty Scripting Basics">
-
-	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-	<title>CoD Scripting Basics</title>
+    <meta charset='utf-8'>
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="Call of Duty Scripting Basics" name="description">
+    <link href="../stylesheets/stylesheet.css" media="screen" rel="stylesheet"
+    type="text/css">
+    <title>CoD Scripting Basics</title>
 </head>
-
 <body>
-	<!-- HEADER -->
-	<div id="header_wrap" class="outer">
-		<header class="inner">
-			<h1 id="project_title">Call of Duty Scripting Reference</h1>
-			<h2 id="project_tagline">Introduction + FAQ</h2>
+    <!-- HEADER -->
+    <div class="outer" id="header_wrap">
+        <header class="inner">
+            <h1 id="project_title">Call of Duty Scripting Reference</h1>
+            <h2 id="project_tagline">Introduction + FAQ</h2>
         </header>
+    </div><!-- MAIN CONTENT -->
+    <div class="outer" id="main_content_wrap">
+        <section class="inner" id="main_content">
+            <h3>Introduction</h3>
+            <h4>VIDEO</h4>
+            <h4>TRANSCRIPT</h4>
+            <p>Hello! My name is Mrpeanut188 and this is my .GSC scripting
+            tutorial for Call of Duty.</p>
+            <p>Scripting is simply coding for a game level, so in any maps you
+            are creating you can<br>
+            create new features or improve existing ones. They are the gears
+            that drive the game.</p>
+            <p>Before we get into the actual scripting, there are two
+            prerequisites you need to understand.<br>
+            The first is that coding itself is just a method, the skills you
+            need are problem<br>
+            solving skills and a basic foundation. Anything you do will have to
+            be specifically<br>
+            looked at and there are NO generic answers. If you want to grasp
+            even a basic understanding,<br>
+            you will have to do a LOT of reading along with critical
+            thinking.</p>
+            <p>The second is the actual filestructure for modding Call of Duty.
+            Inside the RAW folder<br>
+            are a bunch of different folders with different types of files.
+            Those are the files<br>
+            the game uses, your mod folder contents are packed up and replace
+            these files in the<br>
+            actual game when it is ran. For example, the MAPS folder in your
+            mod directory merges<br>
+            and overwrites the MAPS folder loaded by the game when you load
+            your mod. However,<br>
+            the RAW files are only for development, the actual game files are
+            packed away.</p>
+            <p>Whenever you include something in your mod, it adds those files
+            to the game.<br>
+            It also replaces files so you can edit existing files instead of
+            just create.</p>
+            <p>NEVER EDIT ANYTHING IN THE RAW FOLDER, INCLUDE IT IN YOUR MOD
+            INSTEAD!</p>
+            <p>Now that we have that covered, let's get into the actual
+            scripting.<br>
+            For my example to demonstrate some .GSC, I'm going to make a
+            buyable<br>
+            that will move to a destination point when purchased.</p>
+            <p>Instead of adding this feature to existing scripts, we're going
+            to make it<br>
+            as a seperate file. We could then release this to the public or
+            easily add it<br>
+            to other projects.</p>
+            <p>Script files go inside the MAPS folder. Your thoughts should be
+            "This is a file for<br>
+            my mod, so it will go inside my MOD folder."</p>
+            <p>As you've noticed inside of the MAPS directory there are many
+            .GSC files, those are<br>
+            your scipts. We're going to create a new .GSC file here, which is a
+            text file.<br>
+            For this tutorial I'm calling it 'tutorial.gsc'.</p>
+            <p>Nb. Strongly recommended to have a text editor like Notepad++ or
+            UltraEdit.</p>
+            <p>We are now beginning the actual basis to scripting.</p>
+            <p>Computers work in numbers, and coding is a lot like math with
+            words.<br>
+            The better math knowledge you have the easier this will be to
+            grasp.</p>
+            <p>Let's look at a math function: sin(x)</p>
+            <p>Sin is the name of the function, x is what is being passed to it
+            (argument).<br>
+            Defining functions in scripting is very similar:</p>
+            <p>exampleFunction(x, y){}</p>
+            <p>The name of it is exampleFunction, and the arguments are x and
+            y. The pair of<br>
+            brackets past of it contain all the actions inside of it. To add
+            some actions<br>
+            to our function, we need to create a statement. Statments compose
+            the insides<br>
+            of functions. Let's make the function add both x and y and give
+            back the value.</p>
+            <p>exampleFunction(x, y)<br>
+            {<br>
+            return x + y;<br>
+            }</p>
+            <p>Nb. The formatting can be different except for special cases,
+            but this is the recommended formatting.</p>
+            <p>This function will now return the added values of x and y. A
+            semicolon is<br>
+            required after every statement. To actually use our function, we
+            execute,<br>
+            or call the function the same as math.</p>
+            <p>exampleFunction(5, 6);</p>
+            <p>Nb. Since our function returns a value, we would be using this
+            value directly or setting it to a variable for future use.</p>
+            <p>To do anything in the game, many functions have statements which
+            call other functions, and so forth.<br>
+            Everything is executed in order from top-to-bottom, so group
+            actions that should happen at the same<br>
+            time in the same functions.</p>
+            <p>To learn the rest of scripting, please view the individual
+            sections. As of the time of writing,<br>
+            none exist but they will shortly. The following is going to explain
+            how to activate your written<br>
+            functions so that your code is executed.</p>
+            <p>When you load your map, MAPNAME.gsc is loaded. For all revelant
+            map files, the call should stem<br>
+            from this file. If you open the file, you'll see a lot of calls to
+            other files using this format:</p>
+            <p>maps\FILENAME::FUNCTION();</p>
+            <p>Nb. Filename does not include the .GSC extension.</p>
+            <p>To conclude this introduction to the tutorial series, please
+            have a look at the resources page.</p>
+            <p>If you have any questions, please leave a comment on this video
+            and I will try to answer all of<br>
+            your questions.</p>
+            <p>Have a nice day, and journey of learning!</p>
+            <p>//These are seperate reading sections to cover unique
+            concepts.<br>
+            //TODO: Crash Course (Basic needed knowledge)<br>
+            //TODO: .GSC vs .CSC (Server vs. Client) + T4M Notetracks<br>
+            //TODO: Variables and Variable Types<br>
+            //TODO: INCLUDES<br>
+            //TODO: Debugging<br>
+            //TODO: Advanced Math<br>
+            //TODO: IF, THEN<br>
+            //TODO: Loops<br>
+            //TODO: Mini: Switch Statement<br>
+            //TODO: Mini: Threading &amp; Function Tricks<br>
+            //TODO: Compiling Scripts into Fast-Files</p>
+            <h3>FAQ</h3>
+            <h4>QUESTIONS :)</h4>
+        </section>
+    </div><!-- FOOTER  -->
+    <div class="outer" id="footer_wrap">
+        <footer class="inner">
+            <p>Courteously hosted by <a href="https://pages.github.com">GitHub
+            Pages</a>. Created 2016. Slate Theme by Jason Costello.</p>
+        </footer>
     </div>
-		
-    <!-- MAIN CONTENT -->
-	<div id="main_content_wrap" class="outer">
-	  <section id="main_content" class="inner">
-		
-		<h3>Introduction</h3>
-		<h4>VIDEO</h4>
-		<h4>TRANSCRIPT</h4>
-			<p>Hello! My name is Mrpeanut188 and this is my .GSC scripting tutorial for Call of Duty.</p>
-			<p>Scripting is simply coding for a game level, so in any maps you are creating you can<br /> create new features or improve existing ones. They are the gears that drive the game.</p>
-			<p>Before we get into the actual scripting, there are two prerequisites you need to understand.<br /> The first is that coding itself is just a method, the skills you need are problem<br /> solving skills and a basic foundation. Anything you do will have to be specifically<br /> looked at and there are NO generic answers. If you want to grasp even a basic understanding,<br /> you will have to do a LOT of reading along with critical thinking.</p>
-			<p>The second is the actual filestructure for modding Call of Duty. Inside the RAW folder<br /> are a bunch of different folders with different types of files. Those are the files<br /> the game uses, your mod folder contents are packed up and replace these files in the <br /> actual game when it is ran. For example, the MAPS folder in your mod directory merges<br /> and overwrites the MAPS folder loaded by the game when you load your mod. However,<br /> the RAW files are only for development, the actual game files are packed away.</p>
-			<p>Whenever you include something in your mod, it adds those files to the game.<br /> It also replaces files so you can edit existing files instead of just create.</p>
-			<p>NEVER EDIT ANYTHING IN THE RAW FOLDER, INCLUDE IT IN YOUR MOD INSTEAD!</p>
-			<p>Now that we have that covered, let's get into the actual scripting.<br /> For my example to demonstrate some .GSC, I'm going to make a buyable<br /> that will move to a destination point when purchased.</p>
-			<p>Instead of adding this feature to existing scripts, we're going to make it<br /> as a seperate file. We could then release this to the public or easily add it<br /> to other projects.</p>
-			<p>Script files go inside the MAPS folder. Your thoughts should be "This is a file for<br /> my mod, so it will go inside my MOD folder."</p>
-			<p>As you've noticed inside of the MAPS directory there are many .GSC files, those are<br /> your scipts. We're going to create a new .GSC file here, which is a text file.<br /> For this tutorial I'm calling it 'tutorial.gsc'.</p>
-			<p>Nb. Strongly recommended to have a text editor like Notepad++ or UltraEdit.</p>
-			<p>We are now beginning the actual basis to scripting.</p>
-			<p>Computers work in numbers, and coding is a lot like math with words.<br /> The better math knowledge you have the easier this will be to grasp.</p>
-			<p>Let's look at a math function: sin(x)</p>
-			<p>Sin is the name of the function, x is what is being passed to it (argument).<br /> Defining functions in scripting is very similar:</p>
-			<p>exampleFunction(x, y){}</p>
-			<p>The name of it is exampleFunction, and the arguments are x and y. The pair of<br /> brackets past of it contain all the actions inside of it. To add some actions<br /> to our function, we need to create a statement. Statments compose the insides<br /> of functions. Let's make the function add both x and y and give back the value.</p>
-			<p>exampleFunction(x, y)<br /> {<br /> return x + y;<br /> }</p>
-			<p>Nb. The formatting can be different except for special cases, but this is the recommended formatting.</p>
-			<p>This function will now return the added values of x and y. A semicolon is<br /> required after every statement. To actually use our function, we execute,<br /> or call the function the same as math.</p>
-			<p>exampleFunction(5, 6);</p>
-			<p>Nb. Since our function returns a value, we would be using this value directly or setting it to a variable for future use.</p>
-			<p>To do anything in the game, many functions have statements which call other functions, and so forth.<br /> Everything is executed in order from top-to-bottom, so group actions that should happen at the same<br /> time in the same functions.</p>
-			<p>To learn the rest of scripting, please view the individual sections. As of the time of writing,<br /> none exist but they will shortly. The following is going to explain how to activate your written<br /> functions so that your code is executed.</p>
-			<p>When you load your map, MAPNAME.gsc is loaded. For all revelant map files, the call should stem<br /> from this file. If you open the file, you'll see a lot of calls to other files using this format:</p>
-			<p>maps\FILENAME::FUNCTION();</p>
-			<p>Nb. Filename does not include the .GSC extension.</p>
-			<p>To conclude this introduction to the tutorial series, please have a look at the resources page.</p>
-			<p>If you have any questions, please leave a comment on this video and I will try to answer all of<br /> your questions.</p>
-			<p>Have a nice day, and journey of learning!</p>
-			<p>//These are seperate reading sections to cover unique concepts.<br /> //TODO: Crash Course (Basic needed knowledge)<br /> //TODO: .GSC vs .CSC (Server vs. Client) + T4M Notetracks<br /> //TODO: Variables and Variable Types<br /> //TODO: INCLUDES<br /> //TODO: Debugging<br /> //TODO: Advanced Math<br /> //TODO: IF, THEN<br /> //TODO: Loops<br /> //TODO: Mini: Switch Statement<br /> //TODO: Mini: Threading &amp; Function Tricks<br /> //TODO: Compiling Scripts into Fast-Files</p>
-		
-		<h3>FAQ</h3>
-		<h4>QUESTIONS :)</h4>
-		
-		</section>
-	</div>
-	
-	<!-- FOOTER  -->
-	<div id="footer_wrap" class="outer">
-		<footer class="inner">
-			<p>Courteously hosted by <a href="https://pages.github.com">GitHub Pages</a>. Created 2016. Slate Theme by Jason Costello.</p>
-		</footer>
-	</div>
 </body>
 </html>
